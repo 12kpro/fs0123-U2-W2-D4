@@ -1,82 +1,98 @@
-const posts = [
+const cards = [
     {
-        author: 'Robert Roy Britt',
-        title: 'How Old is Old?',
-        content: 'What we consider “old” changes dramatically with age, and our perspectives can be predictive of how well we age',
-        tag: 'Aging ',
-        date: 'Oct 27',
-        timeRead: '5 min',
-        icon: 'image07.jpeg',
-        img: 'image08.jpeg'
+        title: 'GraphQL: introduction to graphQl for beginners',
+        image: 'course-graphql.jpg',
+        timeRead: '2h 40m',
+        level: 'Advance',
+        price: '500',
+        priced:'600',
+        author:{
+            thumb:'avatar-5.jpg',
+            name:'Brooklyn Simmons'
+        }
     },
     {
-        author: 'Taru Anniina Liikanen',
-        title: 'Is Taylor Swift Allowed to Speak About Fat?',
-        content: 'Can you speak about your trauma if you don\'t look traumatized?',
-        tag: 'Health',
-        date: 'Oct 24',
-        timeRead: '6 min',
-        icon: 'image09.jpeg',
-        img: 'image10.jpeg'
+        title: 'A Complete Beginner\'s Guide To JavaScript',
+        image: 'course-javascript.jpg',
+        timeRead: '4h 10m',
+        level: 'Advance',
+        price: '700',
+        priced:'850',
+        author:{
+            thumb:'avatar-6.jpg',
+            name:'Jenny Wilson'
+        }
     },
     {
-        author: 'David Rodenas, Ph. D.',
-        title: 'Don’t Screw Up, You Will Be Found Guilty',
-        content: 'Software Engineer, yours is the right to produce high-quality work at all times, also the liability.',
-        tag: 'Software Engineering',
-        date: 'Oct 15',
-        timeRead: '5 min',
-        icon: 'image11.jpeg',
-        img: 'image12.png'
+        title: 'Beginning Node.js, Express & MongoDB Development',
+        image: 'course-node.jpg',
+        timeRead: '2h 00m',
+        level: 'Intermediate',
+        price: '800',
+        priced:'950',
+        author:{
+            thumb:'avatar-3.jpg',
+            name:'Sina Ray'
+        }
     },
     {
-        author: 'Microsoft Design',
-        title: 'Leave No Trace',
-        content: 'How product designers can break from the status quo and help our planet',
-        tag: 'Sustainability',
-        date: 'Oct 25',
-        timeRead: '11 min',
-        icon: 'image13.png',
-        img: 'image14.png'
+        title: 'Laravel: The Ultimate Beginner\'s Guide to learn',
+        image: 'course-laravel.jpg',
+        timeRead: '1h 00m',
+        level: 'Beginner',
+        price: '170',
+        priced:'220',
+        author:{
+            thumb:'avatar-7.jpg',
+            name:'Sobo Rikhan'
+        }
     },
     {
-        author: 'Scott H. Young',
-        title: 'Variability, Not Repetition, is the Key to Mastery',
-        content: 'Bruce Lee is reported to have said, “I fear not the man who has practiced 10,000 kicks once, but the man who has practiced one kick 10,000...',
-        tag: 'Health',
-        date: 'Oct 26',
-        timeRead: '7 min',
-        icon: 'image15.jpeg',
-        img: 'image16.jpg'
+        title: 'HTML Full Course - Build a Website Tutorial',
+        image: 'course-html.jpg',
+        timeRead: '3h 16m',
+        level: 'Beginner',
+        price: '550',
+        priced:'700',
+        author:{
+            thumb:'avatar-1.jpg',
+            name:'Miston Wilson'
+        }
     },
     {
-        author: 'Paul A. DeStefanoin Human Parts',
-        title: 'What I Overheard as an Escape Room Actor',
-        content: 'Lock a group of people in a room and you’ll witness some surprising confessions',
-        tag: 'Experiences ',
-        date: 'Jan 18, 2020',
-        timeRead: '6 min',
-        icon: 'image17.png',
-        img: 'image18.jpeg'
+        title: 'How to easily create a website with Reaact',
+        image: 'course-react.jpg',
+        timeRead: '3h 55m',
+        level: 'Advance',
+        price: '600',
+        priced:'750',
+        author:{
+            thumb:'avatar-2.jpg',
+            name:'April Noms'
+        }
     },
     {
-        author: 'Kim Scott',
-        title: '6 Steps for Setting Measurable Goals to Avoid “Productivity Paranoia”',
-        content: 'With more people working in remote and hybrid environments than ever before, company, team and individual goals must be explicit and…',
-        tag: 'Health',
-        date: 'Oct 24',
-        timeRead: '6 min',
-        icon: 'image19.jpeg',
-        img: 'image20.jpg'
-    }
+        title: 'Revolutionize how you buildthe web',
+        image: 'course-gatsby.jpg',
+        timeRead: '1h 46m',
+        level: 'Intermediate',
+        price: '800',
+        priced:'850',
+        author:{
+            thumb:'avatar-6.jpg',
+            name:'Jenny Wilson'
+        }
+    },
+    {
+        title: 'CSS: The Ultimate Beginner\'s Guide to learn',
+        image: 'course-css.jpg',
+        timeRead: '2h 10m',
+        level: 'beginner',
+        price: '500',
+        priced:'550',
+        author:{
+            thumb:'avatar-4.jpg',
+            name:'Toni Momi'
+        }
+    }                        
 ]
-const trendingArticles = [
-    {author: 'Tom Cooper', title: 'Ukraine War, 23 October 2022', date: 'Oct 23', timeRead: '5 min', icon:'image01.jpeg'},
-    {author: 'Arthur Hayes', category: 'Entrepreneur\'s Handbook', title: 'Comeback', date: 'Oct 26', timeRead: '24 min', icon: 'image02.png'},
-    {author: 'Tom Cooper', title: 'How I Learned to Love My Breasts Even Though One Is A Horcrux For Voldemort', date: 'Oct 26', timeRead: '2 min', icon: 'image03.jpeg'},
-    {author: 'Frank Mastropolo', category: 'The Riffk', title: 'The Night Paul McCartney Donned a Disguise at Fillmore East', date: 'Oct 22', timeRead: '3 min', icon: 'image02.png'},
-    {author: 'Frank Andrade', category: 'Towards Data Science', title: '5 Python Projects to Automate Your Life: From Beginner to Advanced', date: 'Oct 13', timeRead: '6 min', icon: 'image04.png'},
-    {author: 'Wesley Smits', category: 'JavaScript in Plain English', title: 'How To Make Visual Studio Code Look Amazing', date: 'Oct 20', timeRead: '7 min', icon: 'image06.png'}
-]
-const discover = ['Programming', 'Data Science' , 'Technology', 'Self Improvement', 'Writing' , 'Relationships', 'Machine Learning', 'Productivity']
-const politics = ['Help', 'Status', 'Writers', 'Blog', 'Careers', 'Privacy', 'Terms', 'About', 'Knowable']
